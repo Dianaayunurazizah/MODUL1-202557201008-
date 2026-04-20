@@ -18,16 +18,36 @@ public class MODUL1202557201008 {
     int Rata_rata=0;
     int Banyaknya_elemen=0;
     int Total_array=0;
+    String Arraypertama="ARRAY AWAL :\n";
     for ( int a=0; a<data.length; a++){
         for ( int b=0; b<data[a].length; b++){
             System.out.print(data[a][b]+" ");
             Total_array=Total_array+data[a][b];
             Banyaknya_elemen=data.length*data[0].length;//data.length untuk baris, data[0].length untuk kolom
-            Rata_rata=Total_array/Banyaknya_elemen;}
-        System.out.println("\n");}
-        System.out.println("TOTAL ARRAY :\t"+Total_array);
-        System.out.println("BANYAKNYA ELEMEN :\t"+Banyaknya_elemen);
-        System.out.println("RATA-RATA :\t"+Rata_rata);
-    }
-    
+            Rata_rata=Total_array/Banyaknya_elemen;
+            Arraypertama=Arraypertama+" "+data[a][b];}
+        System.out.println("\n");// cetak ke baris berikutnya
+        Arraypertama=Arraypertama+"\n";}// cetak ke baris berikutnya
+        System.out.println("TOTAL ARRAY \t\t:"+Total_array);
+        System.out.println("BANYAKNYA ELEMEN \t:"+Banyaknya_elemen);
+        System.out.println("RATA-RATA \t\t:"+Rata_rata);
+        JOptionPane.showMessageDialog(null,Arraypertama);
+        
+        String Mencari=JOptionPane.showInputDialog("MAU CARI ANGKA APA CINTAKU??");
+        int Angkacari = Integer.parseInt(Mencari);
+        String Koordinat ="";
+        boolean ketemuu=false;
+        for(int a=0; a<data.length; a++){
+            for(int b=0; b<data[a].length; b++){
+                if(data[a][b]==Angkacari){
+                    Koordinat=Koordinat+"["+a+"]"+" "+"["+b+"]"+"\n";
+                   ketemuu=true;}
+            }
+        }
+        if(ketemuu==true){
+        JOptionPane.showMessageDialog(null,"ANGKA"+" "+Angkacari+" "+"SUDAH KETEMU DI INDEKS KE-\n"+Koordinat);
+        }else{
+            JOptionPane.showMessageDialog(null,"ANGKA YANG DICARI TIDAK KETEMU");
+        }
+    }  
 }
