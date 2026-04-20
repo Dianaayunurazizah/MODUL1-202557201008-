@@ -63,8 +63,10 @@ public class MODUL1202557201008 {
         JOptionPane.showMessageDialog(null,"OKE, MEMASUKKAN ANGKA BARU"+" "+Ganti);// array yang sudah dimasukki array baru
         for(int a=0; a<data.length; a++){
             for(int b=0; b<data[a].length; b++){
+                System.out.print(data[a][b]+" ");
                 Arrayterbaru=Arrayterbaru+" "+data[a][b];
             }
+            System.out.println("\n");
             Arrayterbaru=Arrayterbaru+"\n";}
         JOptionPane.showMessageDialog(null,Arrayterbaru);
         //angka ganjil di array
@@ -76,9 +78,8 @@ public class MODUL1202557201008 {
                     Angkaganjil=Angkaganjil+data[a][b];
                 }
             }
-            Ganjil=Ganjil+"\n";
         }
-        JOptionPane.showMessageDialog(null, Ganjil);
-        System.out.println("TOTAL ANGKA GANJIL :"+Angkaganjil);
+        JOptionPane.showMessageDialog(null,Ganjil+Angkaganjil);
+        System.out.println("TOTAL ANGKA GANJIL\t:"+Angkaganjil);
     }  
 }
