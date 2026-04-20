@@ -32,7 +32,7 @@ public class MODUL1202557201008 {
         System.out.println("BANYAKNYA ELEMEN \t:"+Banyaknya_elemen);
         System.out.println("RATA-RATA \t\t:"+Rata_rata);
         JOptionPane.showMessageDialog(null,Arraypertama);
-        
+        // cari angka
         String Mencari=JOptionPane.showInputDialog("MAU CARI ANGKA APA CINTAKU??");
         int Angkacari = Integer.parseInt(Mencari);
         String Koordinat ="";
@@ -49,5 +49,36 @@ public class MODUL1202557201008 {
         }else{
             JOptionPane.showMessageDialog(null,"ANGKA YANG DICARI TIDAK KETEMU");
         }
+        //ganti angka
+        String Angkaganti=JOptionPane.showInputDialog("MAU DIGANTI DENGAN ANGKA APE?");
+        int Ganti = Integer.parseInt(Angkaganti);
+        String Arrayterbaru ="ARRAY BARU :\n";
+        for(int a=0; a<data.length; a++){
+            for(int b=0; b<data[a].length; b++){
+                if (data[a][b]== Angkacari){
+                   data[a][b] = Ganti;
+               }
+            }
+        }
+        JOptionPane.showMessageDialog(null,"OKE, MEMASUKKAN ANGKA BARU"+" "+Ganti);// array yang sudah dimasukki array baru
+        for(int a=0; a<data.length; a++){
+            for(int b=0; b<data[a].length; b++){
+                Arrayterbaru=Arrayterbaru+" "+data[a][b];
+            }
+            Arrayterbaru=Arrayterbaru+"\n";}
+        JOptionPane.showMessageDialog(null,Arrayterbaru);
+        //angka ganjil di array
+        int Angkaganjil=0;
+        String Ganjil="TOTAL ANGKA GANJIL :\n";
+        for(int a=0; a<data.length; a++){
+            for(int b=0; b<data[a].length; b++){
+                if(b%2!=0){
+                    Angkaganjil=Angkaganjil+data[a][b];
+                }
+            }
+            Ganjil=Ganjil+"\n";
+        }
+        JOptionPane.showMessageDialog(null, Ganjil);
+        System.out.println("TOTAL ANGKA GANJIL :"+Angkaganjil);
     }  
 }
