@@ -14,7 +14,9 @@ public class MODUL1202557201008 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.out.println("SOAL KESATU");
     int [][] data = {{4,6,4,2,8,4,2,10},{4,6,4,2,8,4,2,10}};
+    //Cari rata-rata
     int Rata_rata=0;
     int Banyaknya_elemen=0;
     int Total_array=0;
@@ -81,5 +83,16 @@ public class MODUL1202557201008 {
         }
         JOptionPane.showMessageDialog(null,Ganjil+Angkaganjil);
         System.out.println("TOTAL ANGKA GANJIL\t:"+Angkaganjil);
+        // Soal no 2 
+                System.out.println("SOAL KE DUA");
+        String data2[][]={
+                {"ABDUL","085646668991","Kediri"},
+                {"KUSNO","086546668992","Trenggalek"},
+                {"PONIRAN","085646668999","Bojonegro"}
+        };
+        System.out.println("NAMA\tNOMOR\t\tALAMAT\t");
+        for(int d=0; d<data2.length; d++){
+            System.out.println(data2[d][0]+"\t"+data2[d][1]+"\t"+data2[d][2]);
+        }
     }  
 }
