@@ -17,9 +17,9 @@ public class MODUL1202557201008 {
         System.out.println("SOAL KESATU");
     int [][] data = {{4,6,4,2,8,4,2,10},{4,6,4,2,8,4,2,10}};
     //Cari rata-rata
-    int Rata_rata=0;
-    int Banyaknya_elemen=0;
-    int Total_array=0;
+    double Rata_rata=0;
+    double Banyaknya_elemen=0;
+    double Total_array=0;
     String Arraypertama="ARRAY AWAL :\n";
     for ( int a=0; a<data.length; a++){
         for ( int b=0; b<data[a].length; b++){
